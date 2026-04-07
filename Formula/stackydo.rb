@@ -1,30 +1,26 @@
 class Stackydo < Formula
-  desc "Context-aware CLI task manager with TUI"
-  homepage "https://github.com/kythin/stackydo-cli"
-  version "0.4.2"
+  desc "Context-aware CLI task manager with MCP server"
+  homepage "https://github.com/kythin/stackydo"
+  version "0.9.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://api.github.com/repos/kythin/homebrew-tap/releases/assets/369823474",
-headers: ["Authorization: token #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}", "Accept: application/octet-stream"]
-      sha256 "75e6256c23db226dce712d4b45a6b0cd35c1054cdfc1dba04ecfacf05708fbc6"
-    else
-      url "https://api.github.com/repos/kythin/homebrew-tap/releases/assets/369823473",
-headers: ["Authorization: token #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}", "Accept: application/octet-stream"]
-      sha256 "742c096240931cd4a18c671fa4836a46a69707ebb27aacfdf7fcccf1d5f6ab9f"
+      url "https://github.com/kythin/stackydo/releases/download/v0.9.2/stackydo-aarch64-apple-darwin.tar.xz"
+      sha256 "cf695b23444ea61784abb8baf3cfbeb4bf08c1b749a66ea8bf5abf27520f31c7"
+    elsif Hardware::CPU.intel?
+      url "https://github.com/kythin/stackydo/releases/download/v0.9.2/stackydo-x86_64-apple-darwin.tar.xz"
+      sha256 "f602af28b1151a1b9f328a4af97557caea8f0da96faa450efe9541b88fe13f45"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://api.github.com/repos/kythin/homebrew-tap/releases/assets/369823472",
-headers: ["Authorization: token #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}", "Accept: application/octet-stream"]
-      sha256 "3420053c32478e1e7101ef4b7dce0b94690916aa15364873924601f34a270abd"
-    else
-      url "https://api.github.com/repos/kythin/homebrew-tap/releases/assets/369823471",
-headers: ["Authorization: token #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}", "Accept: application/octet-stream"]
-      sha256 "c655d8e051f9e9e1ff7e411f72ea31a1804eee72ac7c0eebf2f07600f93ee505"
+      url "https://github.com/kythin/stackydo/releases/download/v0.9.2/stackydo-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "76a22f2a7130794d8f37430f73de7c84adb1b393da24158090ef3031e802b603"
+    elsif Hardware::CPU.intel?
+      url "https://github.com/kythin/stackydo/releases/download/v0.9.2/stackydo-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "b091ea1eee8c83e151b39aa9049c026c30f2b326644153f3e6b6b55c59e1bdc6"
     end
   end
 
