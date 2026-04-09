@@ -1,26 +1,26 @@
 class Stackydo < Formula
   desc "Context-aware CLI task manager with MCP server"
   homepage "https://github.com/kythin/stackydo"
-  version "0.9.2"
+  version "0.9.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kythin/stackydo/releases/download/v0.9.2/stackydo-aarch64-apple-darwin.tar.xz"
-      sha256 "cf695b23444ea61784abb8baf3cfbeb4bf08c1b749a66ea8bf5abf27520f31c7"
+      url "https://github.com/kythin/stackydo/releases/download/v0.9.3/stackydo-aarch64-apple-darwin.tar.xz"
+      sha256 "17364ea4206ba612bbf5bfc44c24cbf2d6765467495bf422d7ace52d12e29775"
     elsif Hardware::CPU.intel?
-      url "https://github.com/kythin/stackydo/releases/download/v0.9.2/stackydo-x86_64-apple-darwin.tar.xz"
-      sha256 "f602af28b1151a1b9f328a4af97557caea8f0da96faa450efe9541b88fe13f45"
+      url "https://github.com/kythin/stackydo/releases/download/v0.9.3/stackydo-x86_64-apple-darwin.tar.xz"
+      sha256 "0b111c6f0eeebaadfcf5060ae166c78d475aa4ddf5219bd182fcf6884f4b2bf0"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/kythin/stackydo/releases/download/v0.9.2/stackydo-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "76a22f2a7130794d8f37430f73de7c84adb1b393da24158090ef3031e802b603"
+      url "https://github.com/kythin/stackydo/releases/download/v0.9.3/stackydo-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f72547a9035f18545d719c85dbb07828c3a1f1c474ebdac7864ee3826a77381c"
     elsif Hardware::CPU.intel?
-      url "https://github.com/kythin/stackydo/releases/download/v0.9.2/stackydo-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b091ea1eee8c83e151b39aa9049c026c30f2b326644153f3e6b6b55c59e1bdc6"
+      url "https://github.com/kythin/stackydo/releases/download/v0.9.3/stackydo-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8b861893c61191e17035c1fc27bf8ad3473ce6cacc6be825e0f37408945aa64c"
     end
   end
 
